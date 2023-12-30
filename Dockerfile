@@ -9,3 +9,6 @@ RUN apt-get update && \
         intel-media-va-driver-non-free \
         ffmpeg && \
     rm -rf /var/lib/apt/lists/*
+
+COPY start.sh /
+CMD /start.sh
