@@ -1,4 +1,4 @@
-FROM docker.io/nextcloud:stable
+FROM docker.io/nextcloud:27
 
 RUN apt-get update && \
     apt-get install -y lsb-release && \
