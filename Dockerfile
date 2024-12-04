@@ -1,4 +1,4 @@
-FROM docker.io/nextcloud:27
+FROM docker.io/library/nextcloud:29
 
 RUN apt-get update && \
     apt-get install -y lsb-release && \
@@ -7,7 +7,9 @@ RUN apt-get update && \
     apt-get update && \
     apt-get install -y \
         intel-media-va-driver-non-free \
-        ffmpeg && \
+        ffmpeg \
+        procps \
+        smbclient && \
     rm -rf /var/lib/apt/lists/*
 
 COPY start.sh /
